@@ -3,6 +3,8 @@ package tasks.useCases;
 import java.util.ArrayList;
 import java.util.List;
 
+// importar la clase Repository y usarla en esta clase.
+
 import tasks.models.Task;
 
 // Contenedor de metodos y atributos
@@ -60,6 +62,7 @@ public class TaskUseCase { // Clase de las acciones a realizar el Use Case
     public String create(Task task) {
         try {
             this.tasks.add(task); // Uso de la lista
+            // example: this.repository.create(task);
             return "Tarea Creada:" + task.getName() + " Descripcion:" + task.getDescription();
         }
         catch (Exception e) {
